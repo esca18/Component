@@ -80,7 +80,10 @@ public class FSMclass {
 	public int StateTransition(int iInput){
 		//temp_state = null;
 		if(m_iCurrentState <= 0)
+		{
+			Debug.Log("m_iCurrentState <= 0");
 			return m_iCurrentState;
+		}
 		
 		temp_state = GetState(m_iCurrentState);
 		if(temp_state == null){
@@ -92,6 +95,8 @@ public class FSMclass {
 		
 		//active transition
 		m_iCurrentState = temp_state.GetOutputs(iInput);
+		
+		Debug.Log("m_iCurrentState : " + m_iCurrentState);
 		return m_iCurrentState;
 	}
 }

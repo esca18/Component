@@ -3,7 +3,7 @@ using System.Collections;
 
 public class MoveController : MonoBehaviour
 {
-	int output = 1;
+//	int output = 1;
 	private GameObject _pickHolder;
 	private Pickingclass picks;
 	
@@ -51,13 +51,15 @@ public class MoveController : MonoBehaviour
 	void Update ()
 	{
 		if(Input.GetMouseButton(1))
-		{			
+		{
 			temp.x = picks.transform.position.x;
 			temp.y = 1.0f;
 			temp.z = picks.transform.position.z;
 			
-			output = FSMController.Instance.StateTransition((int)INPUT.command_move);
-			FSMController.Instance.SetCurrentState(output);
+			
+			///!!! fix point
+			FSMController.Instance.ActionLayerStateTransition(FSMController.ACTION_INPUT.MouseRightGround);
+			//FSMController.Instance.SetCurrentState(output);
 		}
 	
 		transform.LookAt(temp);
@@ -66,10 +68,20 @@ public class MoveController : MonoBehaviour
 		//Debug.Log("============== picking pos : " + temp.x.ToString() + " " +  temp.y.ToString() + " " +temp.z.ToString());
 		//Debug.Log("player pos : " + transform.position.x.ToString() + " " + transform.position.y.ToString() + " " + transform.position.z.ToString());
 		
-		if(temp == transform.position)
+		if(Input.GetKey(KeyCode.H))
 		{
-			output = FSMController.Instance.StateTransition((int)INPUT.complete_arrival);
-			FSMController.Instance.SetCurrentState(output);
+			FSMController.Instance.ActionLayerStateTransition(FSMController.ACTION_INPUT.Hkey);
+		}
+		if(Input.GetKey(KeyCode.S))
+		{
+			FSMController.Instance.ActionLayerStateTransition(FSMController.ACTION_INPUT.Skey);
+		}
+		
+		if(temp == transform.position && 
+			(FSMController.Instance.GetActionLayerCurrentState() == FSMController.ACTION_STATE.MoveGround))
+		{
+			Debug.Log("complete_arrival");
+			FSMController.Instance.ActionLayerStateTransition(FSMController.ACTION_INPUT.Arrival);
 		}
 	}
 }

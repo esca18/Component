@@ -1,31 +1,6 @@
 using UnityEngine;
 using System.Collections;
 
-
-public enum INPUT
-{
-	none,
-	command_stop,
-	command_move,
-	command_attack,
-	command_die,
-	command_respwan,
-	complete_arrival,
-	complete_attack,
-	complete_revive,
-	cnt
-};
-
-public enum STATE
-{
-	none,
-	idle,
-	move,
-	attack,
-	die,
-	cnt
-};
-
 //[AddComponentMenu("Transform/Follow Transform")]
 public class GameManager : MonoBehaviour {
 	
@@ -34,8 +9,11 @@ public class GameManager : MonoBehaviour {
 	static GameManager _instance;
 		
 	//fsm
-	public STATE currentState;
-	public GUIText gui;
+	
+	public FSMController.MOVEMENT_STATE CurrentMovementState;
+	public FSMController.ACTION_STATE CurrentActionState;
+	public GUIText MovementLayer_GUI;
+	public GUIText ActionLayer_GUI;
 	
 	public void Awake()
 	{
@@ -72,16 +50,20 @@ public class GameManager : MonoBehaviour {
 	
 	// Use this for initialization
 	void Start () {
-		gui = new GameObject("GUI TEXT", typeof(GUIText)).GetComponent<GUIText>();
-		gui.transform.position = new Vector2(0.0f, 1.0f);					
+		MovementLayer_GUI = new GameObject("MOVEMENT TEXT", typeof(GUIText)).GetComponent<GUIText>();
+		MovementLayer_GUI.transform.position = new Vector2(0.0f, 1.0f);			
+		ActionLayer_GUI = new GameObject("ACTION TEXT", typeof(GUIText)).GetComponent<GUIText>();
+		ActionLayer_GUI.transform.position = new Vector2(0.0f, 0.9f);	
 	}
 	
 	// Update is called once per frame
 	void Update () 
 	{
-		int output;
-		output = FSMController.Instance.GetCurrentState();
-		currentState = (STATE)output;
-		gui.text = "FSM : " + currentState;
+		CurrentMovementState = FSMController.Instance.GetMovementLayerCurrentState();
+		MovementLayer_GUI.text = "MovemntLayer FSM : " + CurrentMovementState;
+		
+
+		CurrentActionState = FSMController.Instance.GetActionLayerCurrentState();
+		ActionLayer_GUI.text = "ActionLayer FSM : " + CurrentActionState;
 	}
 }

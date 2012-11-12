@@ -44,6 +44,7 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\scripts\EnemyTest.cs" />
      <Compile Include="Assets\scripts\FSMCS\FSMclass.cs" />
      <Compile Include="Assets\scripts\FSMCS\FSMcontroller.cs" />
      <Compile Include="Assets\scripts\FSMCS\FSMstate.cs" />
@@ -67,6 +68,8 @@
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
       <Project>{9FBED832-DFD8-C1F2-04B8-3B5B1A1EEACA}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
+    <ProjectReference Include="Assembly-UnityScript-firstpass.unityproj">
+      <Project>{BA59789D-C8FE-E957-C785-DD9A2512E98F}</Project>      <Name>Assembly-UnityScript-firstpass</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
