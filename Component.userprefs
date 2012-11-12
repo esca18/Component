@@ -1,0 +1,47 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State expanded="True">
+          <Node name="Assembly-CSharp" expanded="True">
+            <Node name="Assets" expanded="True">
+              <Node name="scripts" expanded="True">
+                <Node name="FSMCS" expanded="True" />
+              </Node>
+            </Node>
+          </Node>
+          <Node name="Assembly-UnityScript" expanded="True">
+            <Node name="Assets" expanded="True">
+              <Node name="scripts" expanded="True">
+                <Node name="TestAttackZone.js" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="ClassPad">
+        <State expanded="True" selected="True" />
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State>
+          <Value>fsm</Value>
+          <Value>fsm.StateTransition</Value>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="C:\Users\escal8\Documents\Component\Assets\scripts\GameManager.cs" line="43" />
+      <Breakpoint file="C:\Users\escal8\Documents\Component\Assets\scripts\FSMCS\FSMcontroller.cs" line="30" />
+      <Breakpoint file="C:\Users\escal8\Documents\Component\Assets\scripts\FSMCS\FSMcontroller.cs" line="59" />
+      <Breakpoint file="C:\Users\escal8\Documents\Component\Assets\scripts\FSMCS\FSMcontroller.cs" line="65" />
+      <Breakpoint file="C:\Users\escal8\Documents\Component\Assets\scripts\FSMCS\FSMcontroller.cs" line="72" />
+      <Breakpoint file="C:\Users\escal8\Documents\Component\Assets\scripts\GameManager.cs" line="82" />
+      <Breakpoint file="C:\Users\escal8\Documents\Component\Assets\scripts\GameManager.cs" line="75" />
+      <Breakpoint file="C:\Users\escal8\Documents\Component\Assets\scripts\TestAttackZone.js" line="4" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

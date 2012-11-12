@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+	<Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+	<ProductVersion>10.0.20506</ProductVersion>
+	<SchemaVersion>2.0</SchemaVersion>
+	<ProjectGuid>{9C75CDD3-9790-197E-5887-99EE8D9A466E}</ProjectGuid>
+	<OutputType>Library</OutputType>
+	<AppDesignerFolder>Properties</AppDesignerFolder>
+	<RootNamespace></RootNamespace>
+	<AssemblyName>Assembly-UnityScript</AssemblyName>
+	<TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+	<FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+	<DebugSymbols>true</DebugSymbols>
+	<DebugType>full</DebugType>
+	<Optimize>false</Optimize>
+	<OutputPath>Temp\bin\Debug\</OutputPath>
+	<DefineConstants>DEBUG;TRACE;UNITY_3_5_6;UNITY_3_5;UNITY_EDITOR;ENABLE_PROFILER;UNITY_STANDALONE_WIN;ENABLE_GENERICS;ENABLE_DUCK_TYPING;ENABLE_TERRAIN;ENABLE_MOVIES;ENABLE_WEBCAM;ENABLE_MICROPHONE;ENABLE_NETWORK;ENABLE_CLOTH;ENABLE_WWW;ENABLE_SUBSTANCE</DefineConstants>
+	<ErrorReport>prompt</ErrorReport>
+	<WarningLevel>4</WarningLevel>
+	<NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+	<DebugType>pdbonly</DebugType>
+	<Optimize>true</Optimize>
+	<OutputPath>Temp\bin\Release\</OutputPath>
+	<DefineConstants>TRACE</DefineConstants>
+	<ErrorReport>prompt</ErrorReport>
+	<WarningLevel>4</WarningLevel>
+	<NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+	<Reference Include="System" />
+    <Reference Include="System.XML" />
+	<Reference Include="System.Core" />
+	<Reference Include="UnityEngine">
+	  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
+	</Reference>
+	<Reference Include="UnityEditor">
+	  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
+	</Reference>
+  </ItemGroup>
+  <ItemGroup>
+     <Compile Include="Assets\scripts\FSMJS\FSMclass.js" />
+     <Compile Include="Assets\scripts\FSMJS\FSMstate.js" />
+     <Compile Include="Assets\scripts\FSMJS\eFSMinput.js" />
+     <Compile Include="Assets\scripts\FSMJS\eFSMoutput.js" />
+     <Compile Include="Assets\scripts\Fire.js" />
+     <Compile Include="Assets\scripts\HitFire.js" />
+     <Compile Include="Assets\scripts\Menu.js" />
+     <Compile Include="Assets\scripts\Picking_2.js" />
+     <Compile Include="Assets\scripts\TestAttackZone.js" />
+     <Compile Include="Assets\scripts\TestMove.js" />
+     <Compile Include="Assets\scripts\TestPicking.js" />
+     <Compile Include="Assets\scripts\TestRot.js" />
+     <Compile Include="Assets\scripts\TriggerFire.js" />
+     <Compile Include="Assets\scripts\UnitFSM.js" />
+     <Compile Include="Assets\scripts\pick\move.js" />
+     <Compile Include="Assets\scripts\pick\picking.js" />
+     <Compile Include="Assets\scripts\pick\test.js" />
+     <None Include="Assets\shader\NewShader.shader" />
+     <None Include="Assets\shader\test.shader" />
+     <None Include="Assets\StrumpyShaderEditor\Editor\Resources\Internal\Temp\TempShader.shader" />
+     <None Include="Assets\shader\NewShader 1.shader" />
+     <None Include="Assets\Resources\Shaders\UnlitTransparentVertexColoredAdditive.shader" />
+     <None Include="Assets\Resources\Shaders\UnlitTransparentVertexColored.shader" />
+     <None Include="Assets\shader\test2.shader" />
+     <None Include="Assets\Resources\Shaders\Unlit.shader" />
+     <None Include="Assets\StrumpyShaderEditor\Editor\Resources\Internal\TextureCopy.shader" />
+ <Reference Include="GoKit">
+ <HintPath>Assets\Plugins\GoKit.dll</HintPath>
+ </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp-firstpass-vs.csproj">
+      <Project>{9FBED832-DFD8-C1F2-04B8-3B5B1A1EEACA}</Project>      <Name>Assembly-CSharp-firstpass-vs</Name>    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+	   Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  
+</Project>
