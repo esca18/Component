@@ -1,18 +1,29 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\FSMCS\FSMcontroller.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\FSMCS\ActionLayer.cs">
     <Files>
-      <File FileName="Assets\scripts\FSMCS\FSMcontroller.cs" Line="301" Column="26" />
+      <File FileName="Assets\scripts\FSMCS\ActionLayer.cs" Line="18" Column="20" />
+      <File FileName="Assets\scripts\GameManager.cs" Line="25" Column="4" />
+      <File FileName="Assets\scripts\FSMCS\FSMcontroller.cs" Line="12" Column="16" />
       <File FileName="Assets\scripts\PickingCS\Pickingclass.cs" Line="1" Column="1" />
-      <File FileName="Assets\scripts\PickingCS\MoveController.cs" Line="71" Column="28" />
-      <File FileName="Assets\scripts\GameManager.cs" Line="1" Column="1" />
-      <File FileName="Assets\scripts\EnemyTest.cs" Line="10" Column="46" />
-      <File FileName="Assets\Standard Assets\TestAttackZone.js" Line="19" Column="23" />
+      <File FileName="Assets\scripts\PickingCS\MoveController.cs" Line="71" Column="9" />
+      <File FileName="Assets\scripts\EnemyTest.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\FSMCS\FSMclass.cs" Line="15" Column="32" />
+      <File FileName="Assets\scripts\FSMCS\FSMstate.cs" Line="62" Column="28" />
+      <File FileName="Assets\scripts\FSMCS\MovementLayer.cs" Line="89" Column="25" />
+      <File FileName="Assets\scripts\FSMCS\FSMLayerController.cs" Line="5" Column="48" />
+      <File FileName="Assets\Standard Assets\TestAttackZone.js" Line="1" Column="1" />
       <File FileName="Assets\scripts\Fire.js" Line="1" Column="1" />
+      <File FileName="Assets\scripts\TestMove.js" Line="15" Column="1" />
+      <File FileName="Assets\Plugins\MiniJSON.cs" Line="135" Column="41" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="C:\Users\escal8\Documents\Component\Assets\scripts\GameManager.cs" line="57" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches>
+    <Watch file="Assets\scripts\FSMCS\FSMLayerController.cs" line="18" offsetX="100" offsetY="272" expression="m_layer" liveUpdate="False" />
+  </MonoDevelop.Ide.DebuggingService.PinnedWatches>
 </Properties>

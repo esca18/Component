@@ -10,8 +10,10 @@ public class GameManager : MonoBehaviour {
 		
 	//fsm
 	
-	public FSMController.MOVEMENT_STATE CurrentMovementState;
-	public FSMController.ACTION_STATE CurrentActionState;
+//	public FSMController.MOVEMENT_STATE CurrentMovementState;
+//	public FSMController.ACTION_STATE CurrentActionState;
+	public FSMLayerController fsm_layer;
+
 	public GUIText MovementLayer_GUI;
 	public GUIText ActionLayer_GUI;
 	
@@ -19,6 +21,8 @@ public class GameManager : MonoBehaviour {
 	{
 		//씬이 병경돼도 제거되지 않도록 설정
 		DontDestroyOnLoad(gameObject);
+		
+		fsm_layer = new GameObject("FSMLayer Controller", typeof(FSMLayerController)).GetComponent<FSMLayerController>();
 	}
 	
 	/*
@@ -50,20 +54,20 @@ public class GameManager : MonoBehaviour {
 	
 	// Use this for initialization
 	void Start () {
-		MovementLayer_GUI = new GameObject("MOVEMENT TEXT", typeof(GUIText)).GetComponent<GUIText>();
-		MovementLayer_GUI.transform.position = new Vector2(0.0f, 1.0f);			
-		ActionLayer_GUI = new GameObject("ACTION TEXT", typeof(GUIText)).GetComponent<GUIText>();
-		ActionLayer_GUI.transform.position = new Vector2(0.0f, 0.9f);	
+//		MovementLayer_GUI = new GameObject("MOVEMENT TEXT", typeof(GUIText)).GetComponent<GUIText>();
+//		MovementLayer_GUI.transform.position = new Vector2(0.0f, 1.0f);			
+//		ActionLayer_GUI = new GameObject("ACTION TEXT", typeof(GUIText)).GetComponent<GUIText>();
+//		ActionLayer_GUI.transform.position = new Vector2(0.0f, 0.9f);	
 	}
 	
 	// Update is called once per frame
 	void Update () 
 	{
-		CurrentMovementState = FSMController.Instance.GetMovementLayerCurrentState();
-		MovementLayer_GUI.text = "MovemntLayer FSM : " + CurrentMovementState;
+//		CurrentMovementState = FSMController.Instance.GetMovementLayerCurrentState();
+//		MovementLayer_GUI.text = "MovemntLayer FSM : " + CurrentMovementState;
 		
 
-		CurrentActionState = FSMController.Instance.GetActionLayerCurrentState();
-		ActionLayer_GUI.text = "ActionLayer FSM : " + CurrentActionState;
+//		CurrentActionState = FSMController.Instance.GetActionLayerCurrentState();
+//		ActionLayer_GUI.text = "ActionLayer FSM : " + CurrentActionState;
 	}
 }

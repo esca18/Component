@@ -3,6 +3,7 @@ using System.Collections;
 
 public class FSMController : MonoBehaviour
 {
+	/*
 	//Movement Layer
 	public enum MOVEMENT_INPUT
 	{
@@ -305,6 +306,6 @@ public class FSMController : MonoBehaviour
 		ActionLayerStateTransition(_ActionLayerLastInput);
 	}
 	
-	
+	*/
 }
 
